@@ -5,6 +5,7 @@ import { TThemeContex, ThemeContex } from "./contex/ThemeProvider";
 import { MenuItems, MenuList } from "./menu";
 import Profile from "./hooksPages/Profile";
 import GameResult from "./hooksPages/GameResult";
+import UserData from "./components/UserData";
 // import UseEffectExample from "./UseEffectExample";
 // import UseRefExample from "./UseRefExample";
 // import UseReducerExample from "./UseReducerExample";
@@ -17,9 +18,9 @@ function App() {
   console.log(dark);
   return (
     <div
-      className={`h-screen w-full flex justify-center items-center ${
-        dark ? "bg-black" : "bg-white"
-      }`}
+    // className={`h-screen w-full flex justify-center items-center ${
+    //   dark ? "bg-black" : "bg-white"
+    // }`}
     >
       {/* <UseStateExample
         counter={counter}
@@ -36,7 +37,8 @@ function App() {
         toggle
       </button> */}
       {/* <Profile></Profile> */}
-      <GameResult></GameResult>
+      {/* <GameResult></GameResult> */}
+      <UserData></UserData>
     </div>
   );
 }
