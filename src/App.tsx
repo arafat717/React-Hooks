@@ -3,6 +3,8 @@ import { useContext } from "react";
 import "./App.css";
 import { TThemeContex, ThemeContex } from "./contex/ThemeProvider";
 import { MenuItems, MenuList } from "./menu";
+import Profile from "./hooksPages/Profile";
+import GameResult from "./hooksPages/GameResult";
 // import UseEffectExample from "./UseEffectExample";
 // import UseRefExample from "./UseRefExample";
 // import UseReducerExample from "./UseReducerExample";
@@ -27,12 +29,14 @@ function App() {
       {/* <UseReducerExample></UseReducerExample> */}
       {/* <UseEffectExample></UseEffectExample> */}
       {/* <UseRefExample></UseRefExample> */}
-      <MenuList>
+      {/* <MenuList>
         <MenuItems></MenuItems>
-      </MenuList>
-      <button className="btn btn-primary" onClick={() => setDark(!dark)}>
+      </MenuList> */}
+      {/* <button className="btn btn-primary" onClick={() => setDark(!dark)}>
         toggle
-      </button>
+      </button> */}
+      {/* <Profile></Profile> */}
+      <GameResult></GameResult>
     </div>
   );
 }
