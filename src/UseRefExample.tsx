@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import CustomInput from "./CustomInput";
 
 const UseRefExample = () => {
   const myRef = useRef<HTMLInputElement | null>(null);
@@ -8,13 +9,7 @@ const UseRefExample = () => {
   return (
     <div>
       <h1>hello useRef</h1>
-      <input
-        ref={myRef}
-        type="text"
-        name="name"
-        id="name"
-        className="border border-red-500"
-      />
+      <CustomInput className="border border-red-500" ref={myRef}></CustomInput>
     </div>
   );
 };
