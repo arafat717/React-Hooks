@@ -1,7 +1,10 @@
-import React, { useEffect, useRef } from "react";
+import React, { useContext, useEffect, useRef } from "react";
 import CustomInput from "./CustomInput";
+import { menuContex } from "./menu";
 
 const UseRefExample = () => {
+  const { theme } = useContext(menuContex);
+  console.log(theme);
   const myRef = useRef<HTMLInputElement | null>(null);
   useEffect(() => {
     myRef.current?.focus();

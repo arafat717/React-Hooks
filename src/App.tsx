@@ -1,7 +1,8 @@
 // import { useState } from "react";
 import { useContext } from "react";
 import "./App.css";
-import { ThemeContex } from "./contex/ThemeProvider";
+import { TThemeContex, ThemeContex } from "./contex/ThemeProvider";
+import { MenuItems, MenuList } from "./menu";
 // import UseEffectExample from "./UseEffectExample";
 // import UseRefExample from "./UseRefExample";
 // import UseReducerExample from "./UseReducerExample";
@@ -10,7 +11,7 @@ import { ThemeContex } from "./contex/ThemeProvider";
 
 function App() {
   // const [counter, setCounter] = useState(0);
-  const { dark, setDark } = useContext(ThemeContex);
+  const { dark, setDark } = useContext(ThemeContex) as TThemeContex;
   console.log(dark);
   return (
     <div
@@ -26,6 +27,9 @@ function App() {
       {/* <UseReducerExample></UseReducerExample> */}
       {/* <UseEffectExample></UseEffectExample> */}
       {/* <UseRefExample></UseRefExample> */}
+      <MenuList>
+        <MenuItems></MenuItems>
+      </MenuList>
       <button className="btn btn-primary" onClick={() => setDark(!dark)}>
         toggle
       </button>
